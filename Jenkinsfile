@@ -1,13 +1,13 @@
 pipeline {
     agent any
     environment {
-        AWS_ACCOUNT_ID="<REPLACE WITH ACCOUNT ID>"
-        AWS_DEFAULT_REGION="<REPLACE WITH REGION>"
-	    CLUSTER_NAME="<REPLACE WITH CLUSTER NAME>"
-	    SERVICE_NAME="<REPLACE WITH SERVICE NAME>"
-	    TASK_DEFINITION_NAME="<REPLACE WITH TASK DEFINITION NAME>"
+        AWS_ACCOUNT_ID="008971633863"
+        AWS_DEFAULT_REGION="us-east-1"
+	    CLUSTER_NAME="test-cluster1"
+	    SERVICE_NAME="nodejs-service"
+	    TASK_DEFINITION_NAME="a7ee5d365eab4562bb8fb56adc56e3d5"
 	    DESIRED_COUNT="1"
-        IMAGE_REPO_NAME="<REPLACE WITH ECR REPO NAME>"
+        IMAGE_REPO_NAME="cicd/pilot"
         //Do not edit the variable IMAGE_TAG. It uses the Jenkins job build ID as a tag for the new image.
         IMAGE_TAG="${env.BUILD_ID}"
         //Do not edit REPOSITORY_URI.
